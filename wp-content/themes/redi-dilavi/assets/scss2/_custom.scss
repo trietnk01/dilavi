@@ -1,0 +1,241 @@
+/* begin note */
+.note-danger {
+    background-color: #fef7f8;    
+    border-left: 5px solid #f0868e;    
+}
+.note-success {
+    background-color: #c0edf1;    
+    border-left: 5px solid #58d0da;
+}
+.note {   
+    padding: 15px 15px 15px 15px;
+    margin-top: 15px;
+    display: none;        
+    color: #000;
+    text-transform: uppercase;
+}
+/* end note */
+/* begin paging */
+.paging{
+	list-style: none;
+	margin: 0 0 10px 0px;
+	span{
+		&.current{
+			color: #ffffff;
+    		background: #4A2715;
+    		padding: 5px 10px;
+		}		
+	}
+	a{
+		display: inline-block;
+		padding: 0px 10px;
+		border: 1px solid #bbbbbb;    
+		color: #303030;		
+		&:hover{
+			background:#4A2715;
+			color: #ffffff;
+			border: 1px solid #4A2715; 
+		}
+		&:focus{
+			color: #303030;	
+		}
+	}	
+}
+/* end paging */
+.slider-banner-caption_v2{
+	float: left;
+	margin-top: 150px;
+	@media (max-width: 1024px){	
+		margin-top: 50px;	
+	}
+}
+.slider-banner-v2{
+	@media (max-width: 834px){
+		display: none;	
+	}		
+}
+.slideshow{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+	height: 100%;
+}
+.sect-banner{
+	position: relative;
+}
+.paging{
+	text-align: center;
+}
+.footer_social{
+	list-style: none;
+	margin-bottom: 0;
+	margin-top: 55px;
+	
+	padding-left: 0;
+	li{
+		display: inline-block;
+		&:first-child{
+			a{
+				border-radius: 21px;
+				padding: 6px 13px;
+				background-color: $footer_facebook_social;
+			}
+			
+		}
+		&:nth-child(2){
+			a{
+				border-radius: 21px;
+				padding: 6px 11px;
+				background-color:$footer_twitter_social ;
+			}			
+		}
+		&:nth-child(3){
+			a{
+				border-radius: 21px;
+				padding: 6px 10px;
+				background-color:$footer_youtube_social ;
+			}			
+		}
+		&:last-child{
+			a{
+				border-radius: 21px;
+				padding: 6px 8px;
+				background-color: $footer_google_plus_social;
+			}			
+		}
+		margin-right: 5px;
+	}
+	a{
+		color: #fff;
+		display: block;
+		font-size: 13px;
+	}
+}
+.booking_btn{
+	a{
+		display: inline-block;
+		background-image: -webkit-linear-gradient(to right, #7f5b2d, #f5c576);
+		background-image: -o-linear-gradient(to right, #7f5b2d, #f5c576);
+		background-image: linear-gradient(to right, #7f5b2d, #f5c576);
+		padding: 12px 80px;
+		min-width: 47px;
+		font-size: 15px;
+		color: $c-white;	
+		border-radius: 40px;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	text-align: center;
+}
+.contact_btn{
+	a{
+		display: inline-block;
+		background-image: -webkit-linear-gradient(to right, #7f5b2d, #f5c576);
+		background-image: -o-linear-gradient(to right, #7f5b2d, #f5c576);
+		background-image: linear-gradient(to right, #7f5b2d, #f5c576);
+		    padding: 12px 55px;
+    min-width: 47px;
+    font-size: 15px;
+		color: $c-white;	
+		border-radius: 40px;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	float: left;
+}
+.ajax_loader{
+	    background-image: url(../img/ajax-loader.gif);
+    background-repeat: no-repeat;    
+    width: 16px;
+    height: 16px;
+    margin: 15px auto 0 auto;    
+    display: none;
+
+}
+.ajax_loader_contact{
+	    background-image: url(../img/ajax-loader.gif);
+    background-repeat: no-repeat;    
+    width: 16px;
+    height: 16px;
+    margin-top:15px;
+    margin-left: 15px;    
+    display: none;
+    float: left;
+
+}
+.checkin_date_txt,.checkout_date_txt{
+	font-size: 45px !important;
+}
+.slider-banner-box-date{
+	i{
+		font-size: 25px;
+    top: 20px;
+    position: absolute;
+    right: 0;
+	}
+}
+.hp_number_person_id{
+	    border: 0;
+    background: transparent;
+    color: rgba(255,255,255,0.9);
+    
+    font-size: 45px;
+    option{
+    	color: #000;
+    }
+}
+.bao_person{
+    position: absolute;
+right: 22px;
+top: 0px;
+background-color: #040303;
+width: 18px;
+height: 55px;
+
+}
+.number_of_person{	
+	position: relative;
+	margin-top: 5px;
+	    width: 115px;
+	i{
+		position: absolute;
+		right: 30px;
+    top: 15px;
+	}
+}
+.line_booking{
+	    content: '';
+    float: left;
+    width: 1px;
+    height: 36px;
+    background: #575756;
+    margin-top: 40px;
+}
+.raperson{
+	margin-top: 15px;
+}
+.title_number_of_person{
+	opacity: 0.7
+}
+.m-phone{
+	.btn-lang {
+		margin-left: 18px;
+		position: relative;
+		color: #f9c979;
+		padding-left: 12px;
+		outline: none;
+	}
+	.dropdown-menu {
+		padding: 0;
+		min-width: 0;
+		a {
+			font-size: 0.785em;
+			padding: 3px 18px;
+			background: #4a2715;
+			color: #f9c979;
+			border: 1px solid #f9c979;
+		}
+	}	
+} 

@@ -1,0 +1,60 @@
+.sect-contact{
+	address{
+		margin-top: 0;
+		margin-bottom: 20px;
+		@media(min-width: 1024px){
+			margin-bottom: 40px;
+		}
+		a{
+			color: $c-main;
+		}
+		span{
+			color: $c2;
+		}
+	}
+}
+
+
+.form-contact{
+	margin-top: 0;
+	padding: 24px;
+	box-shadow: 0 0 10px #e1e2e2;
+	&-heading{
+		font-size: 20px;
+		color: #333;
+		margin-bottom: 20px;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	.form-control{
+		border-radius: 0;
+	}
+	input.form-control{
+		margin-bottom: 17px;
+	}
+	textarea{
+		height: 90px;
+		@media(min-width: 1024px){
+			height: 178px;
+		}
+	}
+	button[type="submit"],input[type="submit"]{
+		border-radius: 50px;
+		font-size: 15px;
+		height: 41px;
+		width: 174px;
+		line-height: 41px;
+		font-family: $f_bold;
+		@media(max-width: 767px){
+			display: block;
+			width: 100%;
+		}
+	}
+}
+.map{
+	iframe{
+		height: 100%;
+		width: 100%;
+		max-width: 100%;
+	}
+}
