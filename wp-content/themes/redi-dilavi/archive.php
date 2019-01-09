@@ -16,7 +16,7 @@ $current_term_taxonomy = $current_term->taxonomy;
 // 	header("location:" . home_url() );
 // 	exit;
 // } 
-
+echo "<pre>".print_r("OK",true)."</pre>";
 
 
 

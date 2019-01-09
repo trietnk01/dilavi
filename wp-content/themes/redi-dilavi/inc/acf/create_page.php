@@ -61,6 +61,19 @@ acf_add_options_sub_page(array(
 	'parent_slug'	=> 'p-option-page',
 ));
 acf_add_options_sub_page(array(
+	'page_title' 	=> 'Địa chỉ',
+	'menu_title'	=> 'Địa chỉ',
+	'menu_slug' 	=> 'address_company',
+	'parent_slug'	=> 'p-option-page',
+));
+
+acf_add_options_sub_page(array(
+	'page_title' 	=> 'Địa chỉ - En',
+	'menu_title'	=> 'Địa chỉ - En',
+	'menu_slug' 	=> 'address_company_en',
+	'parent_slug'	=> 'p-option-page',
+));
+acf_add_options_sub_page(array(
 	'page_title' 	=> 'Trang hình ảnh - Video',
 	'menu_title'	=> 'Trang hình ảnh - Video',
 	'menu_slug' 	=> 'p_slider_video',

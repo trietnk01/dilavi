@@ -23,17 +23,23 @@ global $hidden_block_partner;
             echo $company_name; 
             ?>          
         </h4>
-        <p>
-          <span class="fa fa-map-marker">
-            
-          </span>
-          <a href="#">
-            <?php 
-              $dia_chi=get_field('dia_chi'.$acf_pr,'option'); 
-              echo $dia_chi;
-            ?>            
-          </a>
-        </p>
+        <?php 
+        $source_address=get_field('f_op_rpt_address'.$acf_pr,'option');
+        if(count(@$source_address) > 0){
+          foreach ($source_address as $key => $value) {
+            ?>
+            <p>
+              <span class="fa fa-map-marker">
+                
+              </span>
+              <a href="javascript:void(0);">
+                <?php echo $value['f_op_address'.$acf_pr]; ?>
+              </a>
+            </p>
+            <?php
+          }
+        }
+        ?>        
         <p>
           <span class="fa fa-map-marker">
             
