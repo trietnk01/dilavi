@@ -856,7 +856,7 @@ function getPaging($queryObj = null){
 	}
 }
 /* begin template include */
-/*add_filter( 'template_include', 'portfolio_page_template');
+add_filter( 'template_include', 'portfolio_page_template');
 function portfolio_page_template( $template ) {
 
 	$id=get_queried_object_id();
@@ -864,13 +864,13 @@ function portfolio_page_template( $template ) {
 	$term=get_term_by('id', $id,'category');
 	if(!empty($term)){
 		$slug=$term->slug;
-	}	
-	if(strcmp($slug, 'dich-vu') == 0 || strcmp($slug, 'services')){
+	}		
+	if(strcmp($slug, 'dich-vu') == 0 || strcmp($slug, 'services') == 0){
 		$file = get_template_directory() . '/template-03_Davila_web_Dichvu.php';
 		if(file_exists($file)){
 			return $file;
 		}
 	}		
 	return $template;
-}*/
+}
 /* end template include */

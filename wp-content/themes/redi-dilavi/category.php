@@ -55,13 +55,26 @@ if($the_query->have_posts()){
   wp_reset_postdata();  
 }  
 ?>
-<section class="p-pt-50 p991-pt-30 sect-news-page">
+<form method="POST">
+  <input type="hidden" name="filter_page" value="1" />
+  <input type="hidden" name="s" value="<?php echo @$s; ?>" />
+  <section class="p-pt-50 p991-pt-30 sect-news-page">
   <div class="container">
     <div class="row">
       <div class="col">
         <h1 class="heading-sect text-center reset-pseudo p-mb-20">
           <strong>
-            <?php single_cat_title();  ?>
+            <?php 
+            if(is_category()){
+              single_cat_title();                
+            }else{
+              if(strcmp($acf_pr,"_en")){
+                echo "Tìm tin tức";
+              }else{
+                echo "Searching news";
+              }    
+            }
+            ?>
           </strong>
           <img src="<?php echo P_IMG_DILA ?>/logo_text_dilavi.png" alt="img">
         </h1>
@@ -79,7 +92,6 @@ if($the_query->have_posts()){
               </a>
             </div>
             <div class="-content">
-
               <h4 class="-title">
                 <a href="<?php echo $source_article[0]['permalink'] ?>" class="-link">
                   <?php echo $source_article[0]['title']; ?>
@@ -92,13 +104,75 @@ if($the_query->have_posts()){
             </div>
           </div>
         </div>
-        
         <?php
       }
       ?>
-    </div>     
+    </div>  
+    <div class="row">
+      <?php 
+      if(count($source_article) > 3){
+        for($i=1;$i<=3;$i++){
+          ?>
+          <div class="col-12 col-sm-12 col-lg-4">                    
+            <div class="box-news-list box-col-50">
+              <div class="-photo">
+                <a href="<?php echo $source_article[$i]['permalink'] ?>" style="background: url('<?php echo $source_article[$i]['featured_img'] ?>') no-repeat center/cover; padding-top: calc(100% / (457 / 303));">
+
+                </a>
+              </div>
+              <div class="-content">
+                <h4 class="-title">
+                  <a href="<?php echo $source_article[$i]['permalink'] ?>" class="-link">
+                    <?php echo $source_article[$i]['title']; ?>
+                  </a>
+                </h4>
+                <div class="-date"><?php echo $source_article[$i]['date_post']; ?></div>
+              </div>
+            </div>
+          </div>
+          <?php
+        }        
+      }
+      ?>
+    </div> 
+    <div class="line-news-list"></div>
+    <div class="row">
+      <?php 
+      if(count($source_article) > 9){
+        for ($i=4; $i <= 9; $i++) { 
+          ?>
+          <div class="col-12 col-lg-4">
+            <div class="box-news box-news-page box-item sm-box-list">
+              <div class="-photo">
+                <a href="<?php echo $source_article[$i]['permalink']; ?>" style="background: url('<?php echo $source_article[$i]['featured_img']; ?>') no-repeat center/cover; padding-top: calc(100% / (457 / 303));">
+
+                </a>
+              </div>
+              <div class="-content">
+
+                <h4 class="-title">
+                  <a href="<?php echo $source_article[$i]['permalink']; ?>" class="-link">
+                    <?php echo $source_article[$i]['title']; ?>
+                  </a>
+                </h4>
+                <div class="-date"><?php echo $source_article[$i]['date_post']; ?></div>
+                <div class="-des">
+                  <?php echo wp_trim_words(  $source_article[$i]['excerpt'] , 20, "..." ); ?>
+                </div>
+              </div>
+            </div>
+          </div>
+          <?php
+        }
+      }
+      ?>
+    </div> 
+    <div class="row">
+      <div class="col"><?php echo @$pagination->showPagination();   ?></div>
+    </div> 
   </div>
 </section>
+</form>
 <?php
 get_footer();
 ?>
