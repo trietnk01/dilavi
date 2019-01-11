@@ -4,7 +4,7 @@ class AdminProductController{
 		global $zController;		
 		preg_match('#(?:.+\/)(.+)#', $_SERVER['SCRIPT_NAME'],$matches);
 		$phpFile = $matches[1];
-		if($_REQUEST["post_type"] =="zaproduct"){
+		if(@$_REQUEST["post_type"] =="zaproduct"){
 			if($phpFile == 'edit.php'){
 				add_filter('manage_posts_columns', array($this,'add_column'));
 				add_action('manage_zaproduct_posts_custom_column', array($this,'display_value_column'),10,2);	
