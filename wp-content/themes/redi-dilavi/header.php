@@ -49,7 +49,7 @@
                  <form action="<?php echo trailingslashit( home_url() ) ?>" method="GET">
 
                     <div id="search-form-mobile" class="search-form-inner">
-                        <input type="text" class="form-control" placeholder="<?php echo t_pll("Tìm kiếm","Search")?>" required name="s">
+                        <input type="text" class="form-control" placeholder="<?php echo t_pll("Tìm kiếm","Search")?>" required name="s" autocomplete="off">
                         <button type="submit"> 
                              <img src="<?php echo P_IMG_DILA ?>/svg/icon-search.svg" class="" alt="img">
                          </button>      
@@ -150,7 +150,7 @@
     <span class="close">X</span>
     <form role="search" id="searchform" action="<?php echo trailingslashit( home_url() ) ?>" method="get">
         <div class="search-inner">
-            <input value="" name="s" type="search" placeholder="<?php echo t_pll('Tìm kiếm',"Search") ?>"/>
+            <input value="" name="s" type="search" placeholder="<?php echo t_pll('Tìm kiếm',"Search") ?>" autocomplete="off"/>
             <button type="submit" class="" value="">
                 <img src="<?php echo P_IMG_DILA ?>/svg/search-w.svg" class="" alt="img">            
             </button>    
